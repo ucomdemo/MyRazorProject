@@ -1,0 +1,40 @@
+﻿@page
+@model MyRazorWeb.Pages.CalcModel
+<h1> Calc </h1>
+
+<form>
+  <div class="input-group mb-3">
+    <span class="input-group-text">x</span>
+    <input type="text" class="form-control"
+           name="X" value="@Model.X" placeholder="x">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text">y</span>
+    <input type="text"
+           name="Y" value="@Model.Y"
+           class="form-control" placeholder="y">
+  </div>
+  <div class="input-group mb-3">
+    <button type="submit" class="btn btn-primary"> Calc </button>
+  </div>
+</form>
+<div class="input-group mb-3">
+  <span class="input-group-text">Result</span>
+  <div class="form-control">@Model.Result</div>
+</div>
+
+
+
+<div class="form-control">
+  @Model.Result
+</div>
+
+@inject MyRazorWeb.Services.IMathService mathService
+@{
+  mathService.Count++;
+}
+<div class="input-group mb-3">
+  <span class="input-group-text">Count</span>
+  <div class="form-control">@mathService.Count</div>
+</div>
+

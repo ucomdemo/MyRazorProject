@@ -1,0 +1,20 @@
+﻿@page
+@model MyRazorWeb.Pages.IndexModel
+@{
+  ViewBag.Title = "Home page";
+}
+<div class="text-center">
+  <h1 class="display-4"> Welcome </h1>
+  <div>
+    @Model.Greeting
+    @{
+      DisplayDate(DateTime.Now);
+    }
+  </div>
+</div>
+@functions {
+  void DisplayDate(DateTime dt)
+  {
+    <span class="date">@dt.ToString("D")</span>
+  }
+}

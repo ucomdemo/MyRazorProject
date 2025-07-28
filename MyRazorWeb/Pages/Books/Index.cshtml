@@ -1,0 +1,9 @@
+﻿@page "BookIndex/{title}"
+@model MyRazorWeb.Pages.Books.IndexModel
+@{
+  ViewData["Title"] = "Books Index";
+}
+
+<h1> Books Index </h1>
+
+Route Parameter : @RouteData.Values["title"]

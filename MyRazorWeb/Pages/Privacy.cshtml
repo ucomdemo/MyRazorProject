@@ -1,0 +1,15 @@
+﻿@page
+@model MyRazorWeb.Pages.PrivacyModel
+@{
+  ViewData["Title"] = "Privacy Policy";
+}
+<h1> @ViewData["Title"] </h1>
+<p> My Razor Web site's privacy policy. </p>
+
+  @section CustomFooter {
+  <footer class="border-top footer text-muted">
+    <div class="container">
+      &copy; @DateTime.Now.Year - My Razor Web
+    </div>
+  </footer>
+  }
