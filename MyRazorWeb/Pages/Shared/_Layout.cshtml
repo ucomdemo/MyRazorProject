@@ -8,7 +8,7 @@
   <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
   <link rel="stylesheet" href="~/MyRazorWeb.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="@(ViewData["IsHomePage"] != null ? "homepage-light-blue" : "")">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
