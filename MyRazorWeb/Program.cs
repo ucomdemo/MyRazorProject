@@ -19,13 +19,12 @@ if (!app.Environment.IsDevelopment()) {
   //app.UseHsts();
 }
 
-app.UseStatusCodePages("text/html; charset=utf-8", "<h3>µo¥Í¿ù»~,Status Code:{0}</h3>");
+app.UseStatusCodePages("text/html; charset=utf-8", "<h3>ï¿½oï¿½Í¿ï¿½ï¿½~,Status Code:{0}</h3>");
 
 //app.UseHttpsRedirection();
 app.UseRouting();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.UseStaticFiles();
+app.MapRazorPages();
 
 app.Run();
